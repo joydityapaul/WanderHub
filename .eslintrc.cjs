@@ -18,5 +18,7 @@ module.exports = {
       { allowConstantExport: true },
     ],
     "react/no-unknown-property": ["error", { ignore: ["lat","lng"] }],
+    "no-unused-vars": "off",
+    "react/prop-types": "off"
   },
 }
