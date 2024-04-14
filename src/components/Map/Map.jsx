@@ -27,17 +27,20 @@ export default function Map({setCoordinates, coordinates, places, setChildClicke
                     setChildClicked(child)
                 }}
             >
+                
                 {
                     places?.map((place, i)=>{
+                        let placeLatitude = Number(place.latitude);
+                        let placeLongitude = Number(place.longitude);
                         return (
                             <div
                                 className={classes.markerContainer}
-                                lat={Number(place.latitude)}
-                                lng={Number(place.longitude)}
+                                lat={placeLatitude}
+                                lng={placeLongitude}
                                 key={i}
                             >
                             {
-                                !isDesktop ? (
+                                (!isDesktop) ? (
                                     <LocationOnOutlinedIcon color="primary" fontSize="large"/>
                                 ) : (
                                     <Paper elevation={3} className={classes.paper}>
